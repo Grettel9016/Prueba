@@ -9,3 +9,11 @@ CREATE TABLE Usuario (
     rol ENUM('cliente', 'colaborador', 'administrador') NOT NULL
 );
 
+CREATE TABLE Cliente (
+    id_cliente INT PRIMARY KEY,
+    id_usuario INT null  , 
+    fecha_registro DATETIME,
+    puntos_lealtad INT DEFAULT 0,
+    FOREIGN KEY (id_cliente) REFERENCES Usuario(id_usuario)
+);
+
