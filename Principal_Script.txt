@@ -17,6 +17,7 @@ CREATE TABLE Cliente (
     FOREIGN KEY (id_cliente) REFERENCES Usuario(id_usuario)
 );
 
+
 CREATE TABLE Hotel (
     id_hotel INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100),
@@ -86,3 +87,4 @@ CREATE TABLE Limpieza (
     observaciones TEXT,
     FOREIGN KEY (id_habitacion) REFERENCES Habitacion(id_habitacion)
 );
+
